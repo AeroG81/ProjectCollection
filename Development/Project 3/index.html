@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 1.6em;
+            background: #d5d5ff;
+        }
+        header,footer{
+            text-align: center;
+        }
+        #container{
+            width: 400px;
+            margin: 50px auto;
+            background: #ffffa5;
+            overflow: hidden;
+            padding: 30px;
+        }
+        .clear{
+            text-decoration: none;
+            background: #fff;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        const KEY = 'note';
+        function getNote(){
+            var note;
+            if(localStorage.getItem(KEY)){
+                note = JSON.parse(localStorage.getItem(KEY));
+            }
+            else{
+                note = 'Edit note and save in storage';
+            }
+            document.getElementById(KEY).innerHTML = note;
+        }
+
+        function saveNote(id){
+            var note = document.getElementById(KEY).innerHTML;
+            localStorage.setItem(KEY,JSON.stringify(note));
+        }
+        function clearNote(){
+            clear: localStorage.clear();
+            getNote();
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Note App</h1>
+    </header>
+    
+    <section id="container">
+        <div id="note" contenteditable="true" onkeyup="saveNote(this.id)"></div>
+    </section>
+
+    <footer>
+        <div>
+            <a href="#" class="clear" onclick="clearNote();">Clear Note</a>
+        </div>
+        <p>Note App &copy; 2020</p>
+    </footer>
+    <script>
+        getNote();
+    </script>
+</body>
+</html>
