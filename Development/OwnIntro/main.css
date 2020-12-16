@@ -1,7 +1,9 @@
 body {
   margin: 0;
   background-color: #023047;
+  height: 4000px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient( #8ecae6,#0b2f3d);
 }
 
 nav {
@@ -153,8 +155,7 @@ footer{
   padding: 30px;
   color: #ffb703;
   background-color: #034d72;
-  border-top: 2px solid #023047;
-  box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, 0.16), 0 -4px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -4px -5px rgba(0, 0, 0, 0.16), 0 -4px -10px rgba(0, 0, 0, 0.12);
 }
 
 /*if position is relative the div inside can be put absolute,
