@@ -1,61 +1,107 @@
 body {
   margin: 0;
-  background-color: #023047;
+  background-color: #a0c4d3;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-nav {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
+.menu {
   position: fixed;
+  z-index: 1;
+  height: 42px;
   background-color: #023047;
-  top: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  margin: 0;
+  box-shadow: 0px 2px 5px #000000,0px 3px 15px #414141;
+}
+
+.menu ul{
+  height: 40px;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li{
+  background-color: #023047;
+  border: 1px solid #c1d5da;
+  display: block;
+  float: left;
+  font: bold 12px arial;
+  height: 40px;
+  line-height: 1.5em;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  width: 160px;
   z-index: 1;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  height: 32px;
-  list-style-type: none;
+.menu ul li:hover{
+  display: inherit;
+  padding: 0 0 0 15px;
+  height: 135px;
+  width: 200px;
+  transition: height 0.2s ease-in,width 0.2s ease-in;
 }
 
-nav li {
-  float: left;
-  border-right: 4px solid #fb8500;
+.menu ul li:nth-child(1){
+  border-radius: 0 0 4px 4px;
 }
 
-nav li:hover {
-  background-color: #034d72;
+.menu ul li:nth-child(1):hover{
+  background: #034d72;
 }
 
-nav li a {
-  padding: 15px 20px;
-  display: block;
-  color: #ffb703;
+.menu ul li:nth-child(2){
+  border-radius: 0 0 4px 4px;
+}
+
+.menu ul li:nth-child(2):hover{
+  background: #20859e;
+}
+
+.menu ul li:nth-child(3){
+  border-radius: 0 0 4px 4px;
+}
+
+.menu ul li:nth-child(3):hover{
+  background: #6799b1;
+}
+
+.menu ul li a{
+  padding: 10px 15px;
   text-decoration: none;
-  font-size: 20px;
+  display: block;
+  color: #e0e1dd;
 }
 
-nav li.right {
-  float: right;
+.menu ul li div{
+  text-align: left;
+  font: normal 12px arial;
+  margin: 10px 0;
 }
+
+.menu ul li div a:hover{
+  text-decoration: underline;
+}
+
+.menu ul li div hr{
+border: none;
+border-top: 1px dotted #a0a0a0;
+margin: 5px 0;
+width: 95%;
+}
+
+
+/*Main section content*/
 
 main {
   width: 100%;
   height: 2400px;
 }
 
-/*Main section content*/
-div {
-  height: 900px;
-}
-
 .content {
-  background-color: #e0e1dd;
+  height:1200px;
   position: relative;
 }
 
@@ -64,29 +110,51 @@ div {
   left: 7%;
   top: 17%;
   position: absolute;
-  border: 2px solid black;
-  border-top-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  
+  border: 2px solid black; 
 }
 
 .content p {
   left: 7%;
   top: 22%;
+  width: 900px;
   position: absolute;
   border: 2px solid black;
   font-size: 48px;
   padding: 10px;
 }
 
+.content img {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  right: 20%;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
 .content-clip-nth {
-  clip-path: polygon(100% 10%, 100% 80%, 69% 100%, 0 75%, 0 0, 69% 25%);
+  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 90%, 0 0, 69% 10%);
 }
 
 .content-clip-last {
   clip-path: polygon(100% 5%, 100% 100%, 69% 100%, 0 100%, 0 0, 69% 25%);
 }
 
+#intro{
+  background: #91afbd;
+}
+
+#bground{
+  background: #a0a0a0;
+}
+
+#highschool{
+  background: #53595c;
+}
+
+#uni{
+  background: #183c61;
+}
 /* Theme color */
 .theme-color-1 {
   background: #8ecae6;
@@ -118,21 +186,21 @@ div {
   background-image: url("img/2.jpeg");
   width: 100%;
   min-height: 50%;
-  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 85%, 0 0);
+  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 90%, 0 0);
 }
 
 .bgimg-2 {
   background-image: url("img/3.jpg");
   width: 100%;
   min-height: 50%;
-  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 85%, 0 0, 69% 15%);
+  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 90%, 0 0, 69% 15%);
 }
 
 .bgimg-3 {
   background-image: url("img/4.jpg");
   width: 100%;
   min-height: 50%;
-  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 85%, 0 0, 69% 15%);
+  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 90%, 0 0, 69% 15%);
 }
 
 /*section title*/
@@ -142,6 +210,7 @@ div {
   justify-content: center;
 }
 .sec-title h1 {
+  margin-top: 500px;
   background: #000000;
   padding: 10px;
   color: #e0e1dd;
@@ -163,15 +232,15 @@ footer{
 input:focus {
   background: #fb8500;
 }
-
+/*
 .list li:nth-child(even) {
-  /* can be odd */
-  /* nth-child can be changed to last-child or first child*/
-  /* formula can be used such as 3n+3 so it will apply effect to every 3 li */
-  /* Background: linear-gradient() / repeating-radial-gradient()*/
+  // can be odd 
+  // nth-child can be changed to last-child or first child
+  // formula can be used such as 3n+3 so it will apply effect to every 3 li 
+  // Background: linear-gradient() / repeating-radial-gradient()
   background-color: #ffb703;
 }
-
+*/
 .animation-1 {
   width: 300px;
   height:100px;

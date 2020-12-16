@@ -9,14 +9,35 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="menu">
         <ul>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#edu">Education status</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li class="right"><a href="#">User</a></li>
+            <li>
+                <a href="#about">About me</a>
+                <div>
+                    <a href="#intro">Introduction</a>
+                    <hr>
+                    <a href="#bground">Background</a>
+                </div>
+            </li>
+            <li>
+                <a href="#edu">Education background</a>
+                <div>
+                    <a href="#highschool">High School</a>
+                    <hr>
+                    <a href="#uni">University</a>
+                </div>
+            </li>
+            <li>
+                <a href="#project">Projects</a>
+                <div>
+                    <a href="#">Project 1</a>
+                    <hr>
+                    <a href="#">Project 2</a>
+                </div>
+            </li>
         </ul>
     </nav>
+    
     <main>
         <div class="bgimg-1">
             <div class="sec-title" id="about">
@@ -25,21 +46,31 @@
             </div>
         </div>
 
-        <div class="content content-clip-nth">
-            <h1>About Me</h1>
+        <div class="content content-clip-nth" id="intro">
+            <h1>Introduction</h1>
             <p>Name: Pan Wei Hung<br>Age: 19<br>Status: Single</p>
+            <img src="img/img-1.png">
+        </div>
+
+        <div class="content content-clip-nth" id="bground">
+            <h1>Background</h1>
+            <p>Place of Birth: <br> &nbsp;&nbsp;&nbsp;Seremban, Negeri Sembilan, Malaysia<br>Date of Birth: <br>&nbsp;&nbsp;&nbsp;1/8/2001</p>
         </div>
 
         <div class="bgimg-2">
             <div class="sec-title" id="edu">
-                <h1>Education status</h1>
+                <h1>Education background</h1>
             </div>
         </div>
 
-        <div class="content  content-clip-nth">
-            <h1>Education status</h1>
+        <div class="content content-clip-nth" id="highschool">
+            <h1 >High School & Foundation</h1>
             <p>High school: Chung Hua High School Seremban<br>Foundation: Monash University Foundation Year (MUFY) at
-                Sunway University<br>University: Monash University<br>Current degree: Software Engineering</p>
+                Sunway University</p>
+        </div>
+        <div class="content content-clip-nth" id="uni">
+            <h1>University</h1>
+            <p>University: Monash University Malaysia<br>Current degree: Software Engineering</p>
         </div>
 
         <div class="bgimg-3">
@@ -50,14 +81,16 @@
 
         <div class="content  content-clip-last">
             <h1>Projects</h1>
-            <p>Self introduction website</p>
+            <p>Self introduction</p>
         </div>
 
         <footer style="height: fit-content;text-align: center;">
             <h1 contenteditable="true">Contact Me</h1>
             <p>Email: pwh010801@gmail.com<br>Instagram: User</p>
-            <center><div class="animation-1"></div></center>
-            
+            <center>
+                <div class="animation-1"></div>
+            </center>
+
         </footer>
     </main>
 
