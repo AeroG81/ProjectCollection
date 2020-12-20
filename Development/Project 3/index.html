@@ -48,6 +48,13 @@
             getNote();
             return false;
         }
+        function showDate(){
+            var date = new Date();
+            document.getElementById('showboard').innerHTML = date;
+        }
+        function deleteDate(){
+            document.getElementById('showboard').innerHTML = "";
+        }
     </script>
 </head>
 <body>
@@ -65,6 +72,11 @@
         </div>
         <p>Note App &copy; 2020</p>
     </footer>
+    <button onmouseover="showDate()" onmouseout="deleteDate()" >
+        show date
+    </button>
+    <div id="showboard"></div>
+
     <script>
         getNote();
     </script>
