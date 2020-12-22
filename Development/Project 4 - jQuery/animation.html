@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Effetcs & Animation</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        .square{
+            width: 150px;
+            height: 150px;
+            background: #6f6f6f;
+            position: relative;
+        }
+        .square2{
+            width: 150px;
+            height: 150px;
+            background: #6f6f6f;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="hideBtn">Hide</button>
+    <button type="button" id="showBtn">Show</button>
+    <button type="button" id="togBtn">Toggle</button>
+    <button type="button" id="fadeOutBtn">Fade Out</button>
+    <button type="button" id="fadeInBtn">Fade In</button>
+    <button type="button" id="fadeTogBtn">Fade Toggle</button>
+    <button type="button" id="slideUpBtn">Slide Up</button>
+    <button type="button" id="slideDownBtn">Slide Down</button>
+    <button type="button" id="slideTogBtn">Slide Toggle</button>
+    <button type="button" id="stopBtn">Stop</button>
+    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id porta metus. Ut tincidunt ultricies
+        ipsum, eu tincidunt orci faucibus et. Praesent efficitur viverra aliquet. Sed consequat dui a urna fringilla, a
+        luctus nibh sodales. Etiam condimentum ultricies erat, ut lobortis magna euismod ac. Maecenas sit amet eleifend
+        libero, et elementum diam. Aliquam erat volutpat. Nullam sed efficitur sapien, non tempus mi. Cras eu dolor
+        urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    <p>Phasellus iaculis luctus justo ac scelerisque. Curabitur efficitur, lacus et placerat hendrerit, dui mauris
+        fermentum dui, in scelerisque nibh tellus sit amet elit. Aenean semper magna quis magna facilisis, sit amet
+        consequat augue ullamcorper. Mauris tristique hendrerit imperdiet. In sit amet quam quam. Donec vitae urna
+        tristique, tincidunt arcu at, posuere risus. Duis dictum nec tellus sit amet sodales. Fusce scelerisque pretium
+        orci. Praesent aliquet posuere massa. Phasellus cursus eget lacus nec consectetur. Integer magna ligula,
+        vestibulum at mollis non, lacinia et leo. Vestibulum laoreet egestas nibh id euismod. Integer accumsan enim
+        neque, eu sagittis lectus interdum id.</p>
+    <hr>
+    <button id="anim">Animation</button>
+    <br><br>
+    <div class="square"></div>
+    <button id="anim2">Animation 2</button>
+    <br><br>
+    <div class="square2"></div>
+    <script>
+        $(document).ready(function () {
+            //Effects
+            $('#hideBtn').click(function () {
+                $('.p1').hide();
+            });
+            $('#showBtn').click(function () {
+                $('.p1').show();
+            });
+            $('#togBtn').click(function () {
+                $('.p1').toggle();
+            });
+            $('#fadeOutBtn').click(function () {
+                $('.p1').fadeOut();//put number inside() unit: miliseconds
+            });
+            $('#fadeInBtn').click(function () {
+                $('.p1').fadeIn();
+            });
+            $('#fadeTogBtn').click(function () {
+                $('.p1').fadeToggle();
+            });
+            $('#slideUpBtn').click(function () {
+                $('.p1').slideUp(2000);
+            });
+            $('#slideDownBtn').click(function () {
+                $('.p1').slideDown(2000);
+            });
+            $('#slideTogBtn').click(function () {
+                $('.p1').slideToggle();
+            });
+            $('#stopBtn').click(function () {
+                $('.p1').stop();
+            });
+
+            //Animation
+            $('#anim').click(function () {
+                $('.square').animate({
+                    left: '+=150px',
+                    opacity: '0.5',
+                    height: '+=100px',
+                    width: '+=100px'
+                },'fast');
+            });
+
+            $('#anim2').click(function () {
+                var div = $('.square2');
+                div.animate({
+                    height: '400px',opacity: '0.7'
+                },'slow');
+                div.animate({
+                    height: '300px',opacity: '0.6'
+                },'fast');
+                div.animate({
+                    height: '100px',opacity: '0.3'
+                },'slow');
+
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - mouse event</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        #square{
+            background: aquamarine;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph</p>
+
+    <button id="btn">Click</button>
+    <div id="square"></div>
+    <div id="output"></div>
+    <script>
+        $(document).ready(function(){
+            /*
+            $('p').hide();
+            $('p').show();
+            $('p').toggle();
+            
+            $('#btn').click(function(){ click can be dblclick (double click)
+                alert('U Clicked !');
+            });
+             or
+            $('#btn').on('click',function(){
+                alert('U Clicked !');
+            });
+            */
+            $('#btn').on('click',function(){
+                $('p').toggle();
+            });
+            /*
+            $('#square').hover(function(){
+                $(this).text('Hovering...');
+            },function(){
+                $(this).text('');
+            });
+            or
+            $('#square').mouseenter(function(){
+                $(this).text('Hovering...');
+
+                $(this).mouseout(function(){
+                    $(this).text('');
+                })
+            });
+            
+            //need to click once before it can run properly
+            $('#square').mousedown(function(){
+                $(this).text('down');
+
+                $(this).mouseup(function(){
+                    $(this).text('up');
+                })
+            });
+            */
+            $('#square').mousemove(function(e){
+                var msg = 'Mouse Position - ';
+                msg += e.pageX + ' ' + e.pageY;
+                $('#output').text(msg);
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQUery - form</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+            <label>Name: </label><br>
+            <input type="text">
+        </div>
+        <div>
+            <label>Email: </label><br>
+            <input type="text">
+        </div>
+        <div>
+            <label>Location: </label><br>
+            <input type="text" value="Kuala Lumpur">
+        </div>
+        <div>
+            <label>Category: </label><br>
+            <select>
+                <option value="1">cat 1</option>
+                <option value="2">cat 2</option>
+                <option value="3">cat 3</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        $(document).ready(function(){
+            //Focus & Blur Events
+            $('#myForm input').focus(function(){
+                $(this).css('background','#e9a9e9');
+
+                $(this).blur(function(){
+                    $(this).css('background','none');
+                })
+            });
+
+            // Change Event
+            $('#myForm select').change(function(){
+                var cat = "";
+                $('select option:selected').each(function(){
+                    cat+= $(this).text() + " ";
+                })
+                $('#output').text(cat);
+            });
+
+            //Select Event (highlight)
+            $(':input').select(function(){
+                $('#output').text('Something was selected').show().fadeOut(1000);
+                console.log('executed');
+            });
+
+            //Submit Event
+            $('#myForm').submit(function(e){
+                e.preventDefault();
+                $('#output').text('Form Submitted');
+            });
+
+            //Keyup and Keydown Events
+            $('#myForm input').keypress(function(){
+                $('#output').text('Typing......');
+                //keypress is also a function
+                $(this).keyup(function(){
+                    $('#output').text('Done...');
+                })
+            });
+        });
+    </script>
+</body>
+</html>
