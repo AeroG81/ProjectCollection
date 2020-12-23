@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - DOM</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        .red{
+            background: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <input id="i1" type="text">
+    <br>
+    <ul id="list1">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    <br>
+    <button type="button" id="btn">CSS toggle</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#d1').text('<h1>Hello World</h1>');
+            $('#d2').html('<h1>Hello World</h1>');
+            $('#i1').val('Hey');
+            //alert($('#d1').text());
+            $('#i1').attr('class','something');
+            //$('#d1').removeAttr('class');
+            $('#list1').append('<li>Item 2</li>');
+            $('#list1').prepend('<li>Item 1</li>');
+            $('#list1').before('<p>B4 list</p>');
+            $('#list1').after('<p>After list</p>');
+            //$('#list1').remove();will remove ul tag
+            //$('#list1').empty(); will not remove ul tag
+            $('#d1').addClass('red');
+            $('#i1').removeClass('something');
+            $('#btn').click(function(){
+                $('#d2').toggleClass('red');
+            });
+            $('#d1').css('color','blue');
+            $('#d1').width('350');
+            $('#d1').height('20');
+            //$('#d2').replaceWith('<h2>Replaced</h2>');
+            //$('li').unwrap();
+            $('#list1').wrap('<div></div>');
+        });
+    </script>
+</body>
+
+</html>

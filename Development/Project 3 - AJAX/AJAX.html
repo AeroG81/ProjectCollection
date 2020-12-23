@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Testing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--
+    <h1 id="text"> Change This Text</h1>
+    <br>
+    <button onclick="changeText()">Button</button>
+
+    <script>
+        function changeText() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById('text').innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open('GET', 'file.txt', true);
+            xhttp.send();
+        }
+    </script>-->
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label>Github Username</label>
+                <input type="text" id="userName" class="form-control">
+                <br>
+                <button type="submit" class="btn btn-danger" onclick="getProfile()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div id="profile"></div>
+    <script>
+        function getProfile() {
+            var userName = document.getElementById('userName').value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    var user = JSON.parse(xhttp.responseText);
+                    console.log(user);
+                    document.getElementById('profile').innerHTML = `<div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">User Requested ${user.login}
+                <span class="badge bg-primary rounded-pill">Public Repository: ${user.public_repos}</span>    
+            </h5>
+            <small class="text-muted"> 1 seconds ago</small>
+          </div>
+          <p class="mb-1">User ID: ${user.id} <img src="${user.avatar_url}" style="border-radius: 50%;height: 30px;width: 30px"></p>
+          <small class="text-muted">Link to Requested User: ${user.html_url}</small>
+          
+          </a>
+      </div>`;
+                }
+            }
+            xhttp.open('GET', `https://api.github.com/users/${userName}`, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>

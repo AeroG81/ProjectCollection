@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Image Slider</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: 'Poppins', sans-serif;
+            /*font-family: 'Dancing Script', cursive;*/
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+        }
+
+        h1 {
+            text-align: center;
+            color: #666666;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        #container {
+            width: 635px;
+            margin: 100px auto 0 auto;
+            position: relative;
+        }
+
+        .slider {
+            height: 332px;
+        }
+
+        .slider img {
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+        }
+
+        #nav {
+            list-style-type: none;
+            z-index: 150;
+        }
+
+        #nav li a {
+            display: block;
+            width: 58px;
+            height: 102px;
+            text-indent: -9999px;
+            outline: none;
+        }
+
+        #prev a {
+            background: url(img/prev.png);
+            width: 58px;
+            height: 102px;
+            position: absolute;
+            top: 240px;
+            left: -70px;
+        }
+
+        #next a {
+            background: url(img/next.png);
+            width: 58px;
+            height: 102px;
+            position: absolute;
+            top: 240px;
+            right: -110px;
+        }
+
+        #next a:hover {
+            background: url(img/next_hover.png);
+        }
+
+        #prev a:hover {
+            background: url(img/prev_hover.png);
+            }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Image Slider</h1>
+        <div class="slider">
+            <img src="img/1.jpeg" width="640px" height="426px">
+            <img src="img/2.jpeg" width="640px" height="426px">
+            <img src="img/3.jpg" width="640px" height="426px">
+            <img src="img/4.jpg" width="640px" height="426px">
+        </div>
+
+        <ul id="nav">
+            <li id="prev"><a href="#">Previous</a></li>
+            <li id="next"><a href="#">Next</a></li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').cycle({
+                fx: 'fade',
+                pause: 1,
+                prev: '#prev',
+                next: '#next'
+            })
+        });
+    </script>
+</body>
+
+</html>
