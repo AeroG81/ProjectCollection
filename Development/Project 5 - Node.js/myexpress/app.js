@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var pug = require('pug');
+//nodemon
 
 const PORT = 3000;
 
@@ -11,13 +13,21 @@ app.use(function(req,req,next){
     next();
 });
 
+//app.set('view engine','pug');//pug template engine
+app.set('view engine','ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'staticfolder')));
 
 app.get('/',function(req,res,){
-    res.send('Hello World!<a href="/about">Link</a>');
-    
+    //pug template engine at /views
+    res.render('index',{
+        title: 'Hello World',
+        showTitle: true,
+        people: ['John','Steve','Jose']
+    });
 });
 
 app.get('/about',function(req,res,){
