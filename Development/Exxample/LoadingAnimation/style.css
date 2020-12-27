@@ -26,6 +26,7 @@ body{
     background: transparent;
     transition: height 0.5s ease-in,width 0.5s ease-in;
 }
+
 .hid-box:hover p{
     display: none;
 }
@@ -52,7 +53,7 @@ body{
     border-top: 10px solid greenyellow;
     border-left: 10px solid greenyellow;
     border-radius: 50%;
-    filter: hue-rotate(calc(90deg*var(--i)));
+    filter: hue-rotate(calc(45deg*var(--i)));
 
 }
 
