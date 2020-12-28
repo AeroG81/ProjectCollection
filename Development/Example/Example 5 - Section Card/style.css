@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+
+section{
+    width: 100%;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.services h1{
+    text-align: center;
+    color: #565656;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.services h1:hover{
+    font-size: 2em;
+    transition: all 0.3s;
+}
+
+.services h1::before{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: #565656;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services h1::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #565656;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%) rotate(45deg);
+}
+
+.service-cards-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.service-card{
+    flex: 1 1 250px;
+    max-width: 250px;
+    margin: 30px 15px;
+    text-align: center;
+    background-color: #fff;
+    color: #565656;
+    padding: 50px 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.service-card:hover{
+    background-color: #f6f7c2;
+    transition: all 1s;
+}
+
+.service-card:hover .icon-container{
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+    transition: all 0.3s;
+}
+
+.service-card .icon-container{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.service-card .icon-container i{
+    transform: rotate(-45deg);
+}
+
+.service-card h2{
+    font-size: 20px;
+}
+.service-card p{
+    font-size: 12px;
+    margin: 15px 0 25px;
+    line-height: 1.6;
+}
+.service-card button{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.service-card button:hover{
+    color: #565656;
+    background-color: transparent;
+    border: 1px solid #565656;
+}
