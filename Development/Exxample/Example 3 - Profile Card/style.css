@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('2.jpeg') no-repeat center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.card{
+    text-align: center;
+    padding: 30px 20px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    border: 1px solid #f1f1f1;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    /*backdrop-filter: blur(22px);*/
+    filter: blur(0.4px);
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid#333;
+}
+
+.card h1{
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.social-media-list{
+    padding: 30px 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.social-media{
+    cursor: pointer;
+}
+
+.social-media:not(:last-child){
+    margin-right: 50px;
+}
+
+.social-media span{
+    display: block;
+}
+
+.social-media span:nth-child(1) i{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.social-media span:nth-child(2){
+    font-size: 12px;
+    font-weight: bolder;
+    color: #333;
+}
+
+.share-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 40px;
+    background-color: #333;
+    border-radius: 100px;
+}
+
+.share-btn i{
+    font-size: 14px;
+    margin-left: 5px;
+    transition: all 0.3s;
+}
+.share-btn:hover i{
+    margin-left: 10px;
+}
