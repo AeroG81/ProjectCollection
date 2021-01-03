@@ -1,0 +1,25 @@
+<%- include('includes/header') %>
+
+<main class="form-signin">
+    <% if(locals.errors){%>
+        <% errors.forEach(function(error){%>
+            <div class="alert alert-danger"><%= error.msg %></div>
+        <% })%>
+    <% } %>
+    <form method="post" action="/users/register">
+        <h1 class="h3 mb-3 fw-normal">User Registration</h1>
+        <input type="text" name="name" class="form-control" placeholder="Name" value="<% (!!locals.name)?name:'' %>" required autofocus>
+        <br>
+        <input type="text" name="email" class="form-control" placeholder="Email" value="<% (!!locals.email)?email:'' %>" required>
+        <br>
+        <input type="text" name="username" class="form-control" placeholder="Username" value="<% (!!locals.username)?username:'' %>" required>
+        <br>
+        <input type="password" name="password" class="form-control" placeholder="Password" value="<% (!!locals.password)?password:'' %>" required>
+
+        <input type="password" name="password2" class="form-control" placeholder="Confirm Password" value="<% (!!locals.password2)?password2:'' %>" required>
+        <p>Already Have An Account? <a href="/users/login">Login Now</a></p>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    </form>
+</main>
+
+<%- include('includes/footer') %>

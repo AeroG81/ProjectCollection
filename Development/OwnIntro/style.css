@@ -55,7 +55,7 @@ nav .link:hover {
   box-shadow: 0 20px 30px rgba(85, 85, 85, 0.514);
 }
 
-@media only screen and (min-device-width: 2560px) {
+@media only screen and (min-device-width: 2400px) {
   .heading {
     width: 2560px;
     height: 1440px;
