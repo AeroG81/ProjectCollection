@@ -1,9 +1,10 @@
 <%- include('includes/header') %>
 
 <main class="form-signin">
-    <form>
+    <%- messages() %>
+    <form method="post" action="/users/login">
         <h1 class="h3 mb-3 fw-normal">User Login</h1>
-        <input type="email" name="username" class="form-control" placeholder="Username" required autofocus>
+        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
         <br>
         <input type="password" name="inputPassword" class="form-control" placeholder="Password" required>
         <p>No Account? <a href="/users/register">Register</a></p>

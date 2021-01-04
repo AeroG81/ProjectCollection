@@ -48,3 +48,21 @@ body {
     font-size: 3.5rem;
   }
 }
+
+#messages ul.error{
+  list-style: none;
+  color: bisque;
+  background-color: #e26666;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+#messages ul.success{
+  list-style: none;
+  color: bisque;
+  background-color: #66e2a8;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
