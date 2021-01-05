@@ -3,21 +3,44 @@
 </head>
 
 <body>
-  {{> main}}
+  <div class="container">
+    {{> main}}
+  </div>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
 
 <template name="main">
   <header>
+    {{> loginButtons}}
+    <hr>
     <h1>{{title}}</h1>
+    {{#if currentUser}}
+    <form class="add form-inline">
+      <input class="form-control" type="text" name="text" placeholder="Add Todo">
+      <input class="form-control" type="text" name="time" placeholder="Add Time">
+      <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+    <br>
+    {{/if}}
+    
   </header>
-  <ul>
+  <ul class="list-group">
     {{#each todos}}
-      <li>{{text}}</li>
+    <li class="list-group-item">
+      {{#if isOwner}}
+      <button type="button" class="btn btn-danger delete">X</button>
+      {{/if}}
+      <input type="checkbox" checked={{checked}} class="toggle-checked">
+      {{#if isOwner}}
+      <button type="button" class="btn btn-warning toggle-private">
+        {{#if private}}
+        Private
+        {{else}}
+        Public
+        {{/if}}
+      </button>
+      {{/if}}
+      <span class="{{#if checked}}checked{{/if}}">{{username}} [{{time}}]: {{text}} </span>
+    </li>
     {{/each}}
   </ul>
 </template>
