@@ -290,6 +290,14 @@ main{
   height: 96px;
 }
 
+.bg-card audio{
+  display: block;
+  position: absolute;
+  bottom: 9%;
+  left: 10%;
+  margin-top: 300px;
+}
+
 /*
 https://developer.mozilla.org/en-US/docs/Web/CSS/text-combine-upright
 
