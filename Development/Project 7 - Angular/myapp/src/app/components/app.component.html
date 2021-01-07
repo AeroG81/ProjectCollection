@@ -1,0 +1,39 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <img src="https://images.pexels.com/photos/4785694/pexels-photo-4785694.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+  <p class="intro-title">About me: {{person.name}} ({{person.age}})</p>
+  <h3>Address</h3>
+  <ul>
+    <li>Street: {{person.address.street}} </li>
+    <li>City: {{person.address.city}} </li>
+    <li>State: {{person.address.state}} </li>
+  </ul>
+  <h3>Friends</h3>
+  <ul>
+    <li *ngFor="let friend of person.friends">
+      {{friend.name}} ({{friend.age}})
+    </li>
+  </ul>
+</div>
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>
