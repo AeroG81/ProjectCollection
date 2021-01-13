@@ -1,7 +1,8 @@
 # ProjectCollection
 Web learning progress material
-
-Including:
+---
+Project Name | Description
+------ | ------
 Example                 | Example Code from online
 OwnIntro                | Working Project (WIP)
 Project 1 - mp4         | HTML 5 tag implementation
