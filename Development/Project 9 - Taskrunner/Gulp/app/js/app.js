@@ -1,0 +1,1 @@
+function greet(e){return alert(e),console.log(e),e}var cnt="Hi, How r u";greet(cnt);
