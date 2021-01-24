@@ -70,3 +70,32 @@ body{
         transform: rotate(360deg);
     }
 }
+
+.wavy-t{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.wavy-t span{
+    position: absolute;
+    top: calc(10px * var(--i));
+    bottom: calc(10px * var(--i));
+    left: calc(10px * var(--i));
+    right:calc(10px * var(--i));
+    border: 10px solid #2f2f2f;
+    border-top: 10px solid greenyellow;
+    border-left: 10px solid greenyellow;
+    border-radius: 0;
+    filter: hue-rotate(calc(70deg*var(--i)));
+
+}
+
+.wavy-t:hover span{
+    border-radius: 50%;
+    transition: all 0.5s;
+    animation: wavy 1.5s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
