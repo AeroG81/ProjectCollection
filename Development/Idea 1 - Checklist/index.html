@@ -1,106 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/7bd9cf9e1b.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Rajdhani:wght@500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7bd9cf9e1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Rajdhani:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
     <title>To-do list</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="backdrop" id="bkdrop"></div>
     <form class="form-group" id="taskform">
-        <p>Day: </p>
-        <select class="default-select" id="day-add">
-            <option value="0">Monday</option>
-            <option value="1">Tuesday</option>
-            <option value="2">Wednesday</option>
-            <option value="3">Thursday</option>
-            <option value="4">Friday</option>
-            <option value="5">Saturday</option>
-            <option value="6">Sunday</option>
-        </select>
-        <br>
-        <p>Task</p>
-        <input type="text" id="task-add" required>
-        <button type="submit" class="add">Add</button>
+      <p>Day:</p>
+      <select class="default-select" id="day-add">
+        <option value="0">Monday</option>
+        <option value="1">Tuesday</option>
+        <option value="2">Wednesday</option>
+        <option value="3">Thursday</option>
+        <option value="4">Friday</option>
+        <option value="5">Saturday</option>
+        <option value="6">Sunday</option>
+      </select>
+      <br />
+      <p>Task</p>
+      <input type="text" id="task-add" required />
+      <button type="submit" class="add">Add</button>
     </form>
     <form class="form-group" id="removeform">
-        <p>Day: </p>
-        <select class="default-select" id="day-remove">
-            <option value="0">Monday</option>
-            <option value="1">Tuesday</option>
-            <option value="2">Wednesday</option>
-            <option value="3">Thursday</option>
-            <option value="4">Friday</option>
-            <option value="5">Saturday</option>
-            <option value="6">Sunday</option>
-        </select>
-        <br>
-        <p>task</p>
-        <select class="task-select" id="task-remove">
-        </select>
-        <button type="submit" class="remove">Remove</button>
+      <p>Day:</p>
+      <select class="default-select" id="day-remove">
+        <option value="0">Monday</option>
+        <option value="1">Tuesday</option>
+        <option value="2">Wednesday</option>
+        <option value="3">Thursday</option>
+        <option value="4">Friday</option>
+        <option value="5">Saturday</option>
+        <option value="6">Sunday</option>
+      </select>
+      <br />
+      <p>task</p>
+      <select class="task-select" id="task-remove"></select>
+      <button type="submit" class="remove">Remove</button>
     </form>
     <nav>
-        <div class="day-nav">
-            <a href="#mon">Monday</a>
-            <a href="#tues">Tuesday</a>
-            <a href="#wed">Wednesday</a>
-            <a href="#thur">Thursday</a>
-            <a href="#fri">Friday</a>
-            <a href="#sat">Saturday</a>
-            <a href="#sun">Sunday</a>
-        </div>
-        <a onclick="adding()" class="button-sec right"><i class="far fa-plus-square"></i> Add</a>
-        <a onclick="remove()" class="button-sec right"><i class="far fa-minus-square"></i> Remove</a>
+      <a href="#mon">Monday</a>
+      <a href="#tues">Tuesday</a>
+      <a href="#wed">Wednesday</a>
+      <a href="#thur">Thursday</a>
+      <a href="#fri">Friday</a>
+      <a href="#sat">Saturday</a>
+      <a href="#sun">Sunday</a>
+
+      <a onclick="adding()" class="button-sec right"
+        ><i class="far fa-plus-square"></i> Add</a
+      >
+      <a onclick="remove()" class="button-sec right"
+        ><i class="far fa-minus-square"></i> Remove</a
+      >
     </nav>
     <main>
-
-        <section class="sec" id="mon">
-            <div class="sec__title">Monday</div>
-            <ul class="sec__content-list" id="mon-list">
-            </ul>
-        </section>
-        <section class="sec" id="tues">
-            <div class="sec__title">Tuesday</div>
-            <ul class="sec__content-list" id="tues-list">
-            </ul>
-        </section>
-        <section class="sec" id="wed">
-            <div class="sec__title">Wednesday</div>
-            <ul class="sec__content-list" id="wed-list">
-            </ul>
-        </section>
-        <section class="sec" id="thur">
-            <div class="sec__title">Thursday</div>
-            <ul class="sec__content-list" id="thur-list">
-            </ul>
-        </section>
-        <section class="sec" id="fri">
-            <div class="sec__title">Friday</div>
-            <ul class="sec__content-list" id="fri-list">
-            </ul>
-        </section>
-        <section class="sec" id="sat">
-            <div class="sec__title">Saturday</div>
-            <ul class="sec__content-list" id="sat-list">
-            </ul>
-        </section>
-        <section class="sec" id="sun">
-            <div class="sec__title">Sunday</div>
-            <ul class="sec__content-list" id="sun-list">
-            </ul>
-        </section>
+      <section class="sec" id="mon">
+        <div class="sec__title">Monday</div>
+        <ul class="sec__content-list" id="mon-list"></ul>
+      </section>
+      <section class="sec" id="tues">
+        <div class="sec__title">Tuesday</div>
+        <ul class="sec__content-list" id="tues-list"></ul>
+      </section>
+      <section class="sec" id="wed">
+        <div class="sec__title">Wednesday</div>
+        <ul class="sec__content-list" id="wed-list"></ul>
+      </section>
+      <section class="sec" id="thur">
+        <div class="sec__title">Thursday</div>
+        <ul class="sec__content-list" id="thur-list"></ul>
+      </section>
+      <section class="sec" id="fri">
+        <div class="sec__title">Friday</div>
+        <ul class="sec__content-list" id="fri-list"></ul>
+      </section>
+      <section class="sec" id="sat">
+        <div class="sec__title">Saturday</div>
+        <ul class="sec__content-list" id="sat-list"></ul>
+      </section>
+      <section class="sec" id="sun">
+        <div class="sec__title">Sunday</div>
+        <ul class="sec__content-list" id="sun-list"></ul>
+      </section>
     </main>
     <footer>
-        <h1>&copy;2021 Made by Pan Wei Hung</h1>
+      <h1>&copy;2021 Made by Pan Wei Hung</h1>
     </footer>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
