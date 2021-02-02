@@ -54,20 +54,21 @@ body{
     border-left: 10px solid greenyellow;
     border-radius: 50%;
     filter: hue-rotate(calc(45deg*var(--i)));
-
+    
 }
 
 .wavy:hover span{
     animation: wavy 1.5s infinite;
     animation-delay: calc(0.1s * var(--i));
+    background: #4b4b4b;
 }
 
 @keyframes wavy {
     0% {
-        transform: rotate(0deg);
+        transform: /*rotateZ(0deg)*/ rotateY(0deg) rotateX(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: /*rotateZ(360deg)*/ rotateY(360deg) rotateX(225deg);
     }
 }
 
@@ -75,7 +76,7 @@ body{
     position: relative;
     width: 300px;
     height: 300px;
-    border-radius: 0;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -85,10 +86,10 @@ body{
     bottom: calc(10px * var(--i));
     left: calc(10px * var(--i));
     right:calc(10px * var(--i));
-    border: 10px solid #2f2f2f;
-    border-top: 10px solid greenyellow;
-    border-left: 10px solid greenyellow;
-    border-radius: 0;
+    border: /*10px solid #2f2f2f*/ 10px solid greenyellow;
+    /*border-top: 10px solid greenyellow;
+    border-left: 10px solid greenyellow;*/
+    border-radius: 50%;
     filter: hue-rotate(calc(70deg*var(--i)));
 
 }

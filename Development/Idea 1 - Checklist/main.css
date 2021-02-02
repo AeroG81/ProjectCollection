@@ -195,6 +195,7 @@ main {
 .sec__content-list li:hover {
   font-weight: bold;
   color: #e4ba5f;
+  border-color: #e4ba5f;
 }
 
 .sec:nth-child(even) .sec__content-list li {
@@ -327,7 +328,7 @@ footer h1 {
     text-align: center;
     border-right: 2px solid #555454;
     writing-mode: horizontal-tb;
-    margin-top: 10px;
+    margin-top: 4px;
   }
 
   nav .right {
