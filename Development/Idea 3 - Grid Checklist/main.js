@@ -25,3 +25,16 @@ function remove() {
         backdrop.classList.remove('show');
     });
 }
+
+var list = document.querySelectorAll('.todo__container_day-group');
+for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', function (ev) {
+        console.log(ev);
+        if (ev.target.tagName === 'I') {
+            ev.target.classList.toggle('show');
+            ev.target.classList.toggle('hide');
+        }
+    }, false);
+}
+
+/* parentElement,nextSibling/previous */
