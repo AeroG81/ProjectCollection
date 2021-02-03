@@ -12,17 +12,8 @@
 </head>
 
 <body>
-    <!--
-        <i class="fas fa-battery-empty color-1"></i>
-        <i class="fas fa-battery-quarter color-2"></i>
-        <i class="fas fa-battery-half color-3"></i>
-        <i class="fas fa-battery-three-quarters color-4"></i>
-        <i class="fas fa-battery-full color-5"></i>
-        <i class="fas fa-battery-three-quarters color-6"></i>
-        <i class="fas fa-battery-half color-7"></i>
-    -->
-    <div class="backdrop" id="bkdrop"></div>
-    <form class="form-group" id="taskform">
+    <div class="backdrop hide" id="bkdrop"></div>
+    <form class="form-group hide" id="taskform">
         <p>Day:</p>
         <select class="default-select" id="day-add">
             <option value="0">Monday</option>
@@ -37,7 +28,7 @@
         <input type="text" id="task-add" required />
         <button type="submit" class="add">Add</button>
     </form>
-    <form class="form-group" id="removeform">
+    <form class="form-group hide" id="removeform">
         <p>Day:</p>
         <select class="default-select" id="day-remove">
             <option value="0">Monday</option>
@@ -56,50 +47,50 @@
         <section class="todo__container">
             <div class="todo__container_day" id="mon-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-1 show"></i>
-                    <i class="fas fa-calendar-check color-1 show"></i>
+                    <i class="fas fa-calendar color-1"></i>
+                    <i class="fas fa-calendar-check color-1"></i>
                     <i class="fas fa-calendar-times color-1 hide"></i>
                 </div>
             </div>
             <div class="todo__container_day" id="tues-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-2 show"></i>
-                    <i class="fas fa-calendar-check color-2 hide"></i>
+                    <i class="fas fa-calendar color-2"></i>
+                    <i class="fas fa-calendar-check color-2"></i>
                     <i class="fas fa-calendar-times color-2 hide"></i>
                 </div>
             </div>
             <div class="todo__container_day" id="wed-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-3 show"></i>
-                    <i class="fas fa-calendar-check color-3 hide"></i>
+                    <i class="fas fa-calendar color-3"></i>
+                    <i class="fas fa-calendar-check color-3"></i>
                     <i class="fas fa-calendar-times color-3 hide"></i>
                 </div>
             </div>
             <div class="todo__container_day" id="thur-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-4 show"></i>
-                    <i class="fas fa-calendar-check color-4 hide"></i>
+                    <i class="fas fa-calendar color-4"></i>
+                    <i class="fas fa-calendar-check color-4"></i>
                     <i class="fas fa-calendar-times color-4 hide"></i>
                 </div>
             </div>
             <div class="todo__container_day" id="fri-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-5 show"></i>
-                    <i class="fas fa-calendar-check color-5 hide"></i>
+                    <i class="fas fa-calendar color-5"></i>
+                    <i class="fas fa-calendar-check color-5"></i>
                     <i class="fas fa-calendar-times color-5 hide"></i>
                 </div>
             </div>
             <div class="todo__container_day" id="sat-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-6 show"></i>
-                    <i class="fas fa-calendar-check color-6 hide"></i>
+                    <i class="fas fa-calendar color-6"></i>
+                    <i class="fas fa-calendar-check color-6"></i>
                     <i class="fas fa-calendar-times color-6 hide"></i>
                 </div>
             </div>
             <div class="todo__container_day" id="sun-list">
                 <div class="todo__container_day-group">
-                    <i class="fas fa-calendar color-7 show"></i>
-                    <i class="fas fa-calendar-check color-7 hide"></i>
+                    <i class="fas fa-calendar color-7"></i>
+                    <i class="fas fa-calendar-check color-7"></i>
                     <i class="fas fa-calendar-times color-7 hide"></i>
                 </div>
             </div>
@@ -139,15 +130,22 @@
                 </li>
                 <li>
                     <button type="button" onclick="adding()" class="color-8 bg-color-9">
-                        <i class="far fa-plus-square"></i> 
+                        <i class="far fa-plus-square"></i>
                         Add Task
                     </button>
                     <button type="button" onclick="remove()" class="color-8 bg-color-9">
-                        <i class="far fa-minus-square"></i> 
+                        <i class="far fa-minus-square"></i>
                         Remove Task
                     </button>
                 </li>
             </ul>
+        </section>
+        <section class="todo__battery">
+            <i class="fas fa-battery-empty color-2"></i>
+            <i class="fas fa-battery-quarter color-7 hide"></i>
+            <i class="fas fa-battery-half color-1 hide"></i>
+            <i class="fas fa-battery-three-quarters color-4 hide"></i>
+            <i class="fas fa-battery-full color-3 hide"></i>
         </section>
     </main>
     <script src="main.js"></script>
