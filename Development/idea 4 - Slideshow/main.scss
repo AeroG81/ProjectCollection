@@ -1,0 +1,94 @@
+$backdrop: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+nav button {
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  border: 2px solid #000000;
+  outline: none;
+  background: rgba(0, 0, 0, 0.452);
+  box-shadow: none;
+  transition: transform 1s,box-shadow .5s;
+}
+
+nav button:focus {
+  box-shadow: 0 0 10px #ffffff;
+  transform: scale(1.1);
+}
+
+nav button i {
+  font-size: 1.5rem;
+  color: #c5c5c5;
+}
+
+.slide-wrapper {
+  width: 600vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  left: 0;
+  transition: left .5s linear;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.slide__text {
+  position: relative;
+  top: 40%;
+  left: 10vw;
+  transform: translateY(-50%);
+}
+
+.slide__title,
+.slide__description {
+  color: #ffffff;
+}
+
+.slide__title {
+  font-size: 4rem;
+}
+
+.slide__description {
+  padding: 0 2rem;
+  width: 33rem;
+}
+
+.slide:nth-of-type(1) {
+  background: $backdrop, url("img/kl.jpg") center/cover no-repeat;
+}
+
+.slide:nth-of-type(2) {
+  background: $backdrop, url("img/sydney.jpg") center/cover no-repeat;
+}
+
+.slide:nth-of-type(3) {
+  background: $backdrop, url("img/wellington.jpg") center/cover no-repeat;
+}
+
+.slide:nth-of-type(4) {
+  background: $backdrop, url("img/tokyo.jpg") center/cover no-repeat;
+}
+
+.slide:nth-of-type(5) {
+  background: $backdrop, url("img/taipei.jpg") center/cover no-repeat;
+}
+
+.slide:nth-of-type(6) {
+  background: $backdrop, url("img/rome.jpg") center/cover no-repeat;
+}
