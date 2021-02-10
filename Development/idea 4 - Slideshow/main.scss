@@ -21,10 +21,10 @@ nav button {
   outline: none;
   background: rgba(0, 0, 0, 0.452);
   box-shadow: none;
-  transition: transform 1s,box-shadow .5s;
+  transition: transform .3s,box-shadow .3s;
 }
 
-nav button:focus {
+nav button:hover {
   box-shadow: 0 0 10px #ffffff;
   transform: scale(1.1);
 }
@@ -35,7 +35,7 @@ nav button i {
 }
 
 .slide-wrapper {
-  width: 600vw;
+  width: 700vw;
   height: 100vh;
   position: relative;
   display: flex;
@@ -49,19 +49,25 @@ nav button i {
 }
 
 .slide__text {
+  width: fit-content;
   position: relative;
+  z-index: 3;
   top: 40%;
   left: 10vw;
   transform: translateY(-50%);
 }
 
 .slide__title,
-.slide__description {
+.slide__description,
+.slide__link {
+  font-family: 'Titillium Web', sans-serif;
   color: #ffffff;
+  display: block;
 }
 
 .slide__title {
   font-size: 4rem;
+  width: fit-content;
 }
 
 .slide__description {
@@ -69,26 +75,51 @@ nav button i {
   width: 33rem;
 }
 
+.slide__link {
+  width: fit-content;
+  margin: 2rem;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.slide__link:hover{
+  border: 1px solid #c5c5c5;
+  background: rgba(255, 255, 255, 0.2);
+  color: #c5c5c5;
+}
+
 .slide:nth-of-type(1) {
-  background: $backdrop, url("img/kl.jpg") center/cover no-repeat;
+  background: $backdrop,url("img/kl.jpg") center/cover no-repeat;
 }
 
 .slide:nth-of-type(2) {
-  background: $backdrop, url("img/sydney.jpg") center/cover no-repeat;
+  background: $backdrop,url("img/sydney.jpg") center/cover no-repeat;
 }
 
 .slide:nth-of-type(3) {
-  background: $backdrop, url("img/wellington.jpg") center/cover no-repeat;
+  background: $backdrop,url("img/wellington.jpg") center/cover no-repeat;
 }
 
 .slide:nth-of-type(4) {
-  background: $backdrop, url("img/tokyo.jpg") center/cover no-repeat;
+  background: $backdrop,url("img/tokyo.jpg") center/cover no-repeat;
 }
 
 .slide:nth-of-type(5) {
-  background: $backdrop, url("img/taipei.jpg") center/cover no-repeat;
+  background: $backdrop,url("img/taipei.jpg") center/cover no-repeat;
 }
 
 .slide:nth-of-type(6) {
-  background: $backdrop, url("img/rome.jpg") center/cover no-repeat;
+  background: $backdrop,url("img/rome.jpg") center/cover no-repeat;
 }
+
+.slide:nth-of-type(7) {
+  background: $backdrop,url("img/newyork.jpg") center/cover no-repeat;
+}
+
+
+/*
+  background transition can be used to create a entering effect
+  the backdrop cover should be together with the element triggering the effect using ~ sibling select
+*/
