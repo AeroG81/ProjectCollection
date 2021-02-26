@@ -63,15 +63,18 @@
 }
 
 .cube-1 .front {
-    background: url(images/slide-img-1.jpg) cover no-repeat 50% 0;
+    background: url(images/slide-img-1.jpg) no-repeat 50% 0;
+    background-size: cover;
 }
 
 .cube-2 .front {
-    background: url(images/slide-img-1.jpg) cover no-repeat 50% -7vw;
+    background: url(images/slide-img-1.jpg) no-repeat 50% -7vw;
+    background-size: cover;
 }
 
 .cube-3 .front {
-    background: url(images/slide-img-1.jpg) cover no-repeat 50% -14vw;
+    background: url(images/slide-img-1.jpg) no-repeat 50% -14vw;
+    background-size: cover;
 }
 
 .back {
@@ -184,17 +187,3 @@
     top: 140%;
     left: 120%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

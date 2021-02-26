@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    background: #1e1e47;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container{
+    font-size: 7rem;
+    font-weight: bold;
+    text-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+    width: 39rem;
+    height: 39rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.342);
+    border: 5px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 4rem 0 rgb(201, 201, 201);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-cover{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'date date date date date'
+    'hour . min . sec';
+    grid-template-columns: 11rem 1rem 11rem 1rem 11rem;
+    grid-template-rows: 6rem 11rem;
+    place-items: center;
+    padding: 1.5rem;
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.clock__date{
+    padding: 1rem;
+    grid-area: date;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.clock__hour{
+    grid-area: hour;
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.clock__mins{
+    grid-area: min;
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.clock__secs{
+    grid-area: sec;
+    color: rgba(255, 255, 255, 0.753);
+}

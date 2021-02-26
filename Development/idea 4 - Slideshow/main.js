@@ -47,7 +47,7 @@ function move(direction) {
 }
 
 var direction = false;
-setInterval(() => {
+var slide = setInterval(() => {
     if (move(direction)) {
         if (direction) {
             direction = false;

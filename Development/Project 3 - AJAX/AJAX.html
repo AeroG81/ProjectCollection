@@ -39,7 +39,8 @@
     </div>
     <div id="profile"></div>
     <script>
-        function getProfile() {
+        function getProfile(e) {
+            console.log('executed');
             var userName = document.getElementById('userName').value;
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {

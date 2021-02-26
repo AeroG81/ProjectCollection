@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.8)), #2b3344;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timer{
+    width: 100vw;
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00f7ff;
+    text-shadow: 0 0 20px #00f7ff;
+}
+
+.timer p{
+    display: inline-block;
+    margin: 0;
+}
+
+.day{
+    font-size: 4rem;
+    width: 13rem;
+}
+
+.hour{
+    width: 13rem;
+}
+
+.min{
+    width: 13rem;
+}
+
+.sec{
+    color: #ff00ea;
+    text-shadow: 0 0 20px #ff00ea;
+    width: 13rem;
+}
+
+.notify{
+    width: fit-content;
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000;
+}
+
+legend{
+    font-size: 2rem;
+    color: #00f7ff;
+}
+
+input[type="date"]{
+    padding: 0.2rem;
+    margin: 0 .5rem;
+}
+
+fieldset{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(1, 1, 1, 0.4);
+}

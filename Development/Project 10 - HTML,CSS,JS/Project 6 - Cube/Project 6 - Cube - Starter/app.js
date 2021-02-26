@@ -2,13 +2,14 @@ let x = 0, bool = false, interval;
 
 const rotate = () => {
     const cubes = document.querySelectorAll('.cube');
-    
+    console.log(cubes);
     Array.from(cubes).forEach(cube => cube.style.transform = `rotateY(${x}deg)`);
 }
 
 const changePlayPause = () => {
     const i = document.querySelector('.play-pause i');
     const cls = i.classList[1];
+    console.log(i);
     if(cls === 'fa-play') {
         i.classList.remove('fa-play');
         i.classList.add('fa-pause');
@@ -60,7 +61,6 @@ document.querySelector('.right-arrow').addEventListener('click', () => {
     }
 });
 
-
 document.querySelector('.right-arrow').addEventListener('mouseover', () => {
     x -= 25;
     rotate();
@@ -74,44 +74,3 @@ document.querySelector('.right-arrow').addEventListener('mouseout', () => {
 document.querySelector('.play-pause').addEventListener('click', () => {
     playPause();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
