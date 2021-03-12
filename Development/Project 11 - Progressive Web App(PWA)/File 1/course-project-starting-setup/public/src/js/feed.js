@@ -129,7 +129,7 @@ fetch(url)
 
 
 function sendData() {
-  fetch('https://pwagram-99adf.firebaseio.com/posts.json', {
+  fetch('https://pwagram-99adf.firebaseio.com/posts.json', {//change url here
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -195,7 +195,7 @@ self.addEventListener('sync', (ev) => {
       readAllData('sync-posts').then((data) => {
         console.log(data);
         for (let dt of data) {
-          fetch('https://pwagram-1b1cf-default-rtdb.firebaseio.com/posts.json', {
+          fetch('https://pwagram-1b1cf-default-rtdb.firebaseio.com/posts.json', { //change url here
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
