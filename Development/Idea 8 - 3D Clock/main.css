@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #22547e;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: bold;
+    transform: translateY(-300px);
+}
+
+.clock {
+  width: 1000px;
+  height: 240px;
+  box-shadow: 0 0 20px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+  overflow: hidden;
+}
+
+.clock::after {
+  content: "";
+  height: 240px;
+  width: 40px;
+  position: absolute;
+  border: 6px solid black;
+}
+
+.cube_1 {
+  height: 80px;
+  transform-style: preserve-3d;
+  transform-origin: center center -500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+  background: transparent;
+  transition: transform 0.2s;
+}
+
+.cube_2 {
+  height: 80px;
+  transform-style: preserve-3d;
+  transform-origin: center center -500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+  background: transparent;
+  transition: transform 0.2s;
+}
+
+.cube_3 {
+  height: 80px;
+  transform-style: preserve-3d;
+  transform-origin: center center -500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+  background: transparent;
+  transition: transform 0.2s;
+}
+
+p {
+  display: inline-block;
+  background: transparent;
+  padding: 3px;
+  font-size: 2rem;
+}
+
+.front {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  background: #8d8d8d;
+  transform-origin: center center -500px;
+  transform: translateZ(21vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
+.f_1 {
+  transform: rotateY(0deg);
+}
+.f_2 {
+  transform: rotateY(6deg);
+}
+.f_3 {
+  transform: rotateY(12deg);
+}
+.f_4 {
+  transform: rotateY(18deg);
+}
+.f_5 {
+  transform: rotateY(24deg);
+}
+.f_6 {
+  transform: rotateY(30deg);
+}
+.f_7 {
+  transform: rotateY(36deg);
+}
+.f_8 {
+  transform: rotateY(42deg);
+}
+.f_9 {
+  transform: rotateY(48deg);
+}
+.f_10 {
+  transform: rotateY(54deg);
+}
+.f_11 {
+  transform: rotateY(60deg);
+}
+.f_12 {
+  transform: rotateY(66deg);
+}
+.f_13 {
+  transform: rotateY(72deg);
+}
+.f_14 {
+  transform: rotateY(78deg);
+}
+.f_15 {
+  transform: rotateY(84deg);
+}
+.f_16 {
+  transform: rotateY(90deg);
+}
+.f_17 {
+  transform: rotateY(96deg);
+}
+.f_18 {
+  transform: rotateY(102deg);
+}
+.f_19 {
+  transform: rotateY(108deg);
+}
+.f_20 {
+  transform: rotateY(114deg);
+}
+.f_21 {
+  transform: rotateY(120deg);
+}
+.f_22 {
+  transform: rotateY(126deg);
+}
+.f_23 {
+  transform: rotateY(132deg);
+}
+.f_24 {
+  transform: rotateY(138deg);
+}
+.f_25 {
+  transform: rotateY(144deg);
+}
+.f_26 {
+  transform: rotateY(150deg);
+}
+.f_27 {
+  transform: rotateY(156deg);
+}
+.f_28 {
+  transform: rotateY(162deg);
+}
+.f_29 {
+  transform: rotateY(168deg);
+}
+.f_30 {
+  transform: rotateY(174deg);
+}
+.f_31 {
+  transform: rotateY(180deg);
+}
+.f_32 {
+  transform: rotateY(186deg);
+}
+.f_33 {
+  transform: rotateY(192deg);
+}
+.f_34 {
+  transform: rotateY(198deg);
+}
+.f_35 {
+  transform: rotateY(204deg);
+}
+.f_36 {
+  transform: rotateY(210deg);
+}
+.f_37 {
+  transform: rotateY(216deg);
+}
+.f_38 {
+  transform: rotateY(222deg);
+}
+.f_39 {
+  transform: rotateY(228deg);
+}
+.f_40 {
+  transform: rotateY(234deg);
+}
+.f_41 {
+  transform: rotateY(240deg);
+}
+.f_42 {
+  transform: rotateY(246deg);
+}
+.f_43 {
+  transform: rotateY(252deg);
+}
+.f_44 {
+  transform: rotateY(258deg);
+}
+.f_45 {
+  transform: rotateY(264deg);
+}
+.f_46 {
+  transform: rotateY(270deg);
+}
+.f_47 {
+  transform: rotateY(276deg);
+}
+.f_48 {
+  transform: rotateY(282deg);
+}
+.f_49 {
+  transform: rotateY(288deg);
+}
+.f_50 {
+  transform: rotateY(294deg);
+}
+.f_51 {
+  transform: rotateY(300deg);
+}
+.f_52 {
+  transform: rotateY(306deg);
+}
+.f_53 {
+  transform: rotateY(312deg);
+}
+.f_54 {
+  transform: rotateY(318deg);
+}
+.f_55 {
+  transform: rotateY(324deg);
+}
+.f_56 {
+  transform: rotateY(330deg);
+}
+.f_57 {
+  transform: rotateY(336deg);
+}
+.f_58 {
+  transform: rotateY(342deg);
+}
+.f_59 {
+  transform: rotateY(348deg);
+}
+.f_60 {
+  transform: rotateY(354deg);
+}
+.h_1 {
+  width: 132px;
+  transform: rotateY(0deg);
+}
+.h_2 {
+  width: 132px;
+  transform: rotateY(15deg);
+}
+.h_3 {
+  width: 132px;
+  transform: rotateY(30deg);
+}
+.h_4 {
+  width: 132px;
+  transform: rotateY(45deg);
+}
+.h_5 {
+  width: 132px;
+  transform: rotateY(60deg);
+}
+.h_6 {
+  width: 132px;
+  transform: rotateY(75deg);
+}
+.h_7 {
+  width: 132px;
+  transform: rotateY(90deg);
+}
+.h_8 {
+  width: 132px;
+  transform: rotateY(105deg);
+}
+.h_9 {
+  width: 132px;
+  transform: rotateY(120deg);
+}
+.h_10 {
+  width: 132px;
+  transform: rotateY(135deg);
+}
+.h_11 {
+  width: 132px;
+  transform: rotateY(150deg);
+}
+.h_12 {
+  width: 132px;
+  transform: rotateY(165deg);
+}
+.h_13 {
+  width: 132px;
+  transform: rotateY(180deg);
+}
+.h_14 {
+  width: 132px;
+  transform: rotateY(195deg);
+}
+.h_15 {
+  width: 132px;
+  transform: rotateY(210deg);
+}
+.h_16 {
+  width: 132px;
+  transform: rotateY(225deg);
+}
+.h_17 {
+  width: 132px;
+  transform: rotateY(240deg);
+}
+.h_18 {
+  width: 132px;
+  transform: rotateY(255deg);
+}
+.h_19 {
+  width: 132px;
+  transform: rotateY(270deg);
+}
+.h_20 {
+  width: 132px;
+  transform: rotateY(285deg);
+}
+.h_21 {
+  width: 132px;
+  transform: rotateY(300deg);
+}
+.h_22 {
+  width: 132px;
+  transform: rotateY(315deg);
+}
+.h_23 {
+  width: 132px;
+  transform: rotateY(330deg);
+}
+.h_24 {
+  width: 132px;
+  transform: rotateY(345deg);
+}
+/*
+block container: which can be rotate and
+inside block: which rotate it selfs to be facing out
+*/
