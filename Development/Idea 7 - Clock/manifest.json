@@ -1,0 +1,25 @@
+{
+    "name": "Simple clock app",
+    "short_name": "Clock WH",
+    "icons": [
+      {
+        "src": "images/clock.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "images/clock_2.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      }
+    ],
+    "start_url": "main.html",
+    "scope": ".",
+    "display": "fullscreen",
+    "orientation": "portrait-primary",
+    "background_color": "#fff",
+    "theme_color": "#3f51b5",
+    "description": "A simple clock app for testing PWA",
+    "dir": "ltr",
+    "lang": "en-US"
+  }
