@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+  
+    "name": "UU Font Changer Plugin",
+    "description": "This extension increase the font for UU",
+    "version": "1.7",
+  
+    "browser_action": {
+     "default_icon": "icon.png",
+     "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://sj.uukanshu.com/*","https://m.qidian.com/*","https://www.uukanshu.com/*"],
+          "js": ["background.js"],
+          "css": ["background.css"]
+        }
+      ]
+    ,
+    "permissions": [
+     "activeTab",
+     "storage"
+     ]
+  }
