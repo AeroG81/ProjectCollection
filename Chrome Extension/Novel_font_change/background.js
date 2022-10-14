@@ -1,33 +1,13 @@
 // background.js
 
 let font, height;
-function readLocalStorage(key) {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get([key], function (result) {
-            if (result[key] === undefined) {
-                reject();
-            } else {
-                resolve(result[key]);
-            }
-        });
-    });
-};
-
-readLocalStorage('fontKey').then(result => {
-    font = result + "px";
-});
-readLocalStorage('heightKey').then(result => {
-    height = result + "px";
-
+chrome.storage.sync.get(['font', 'line'], function(items) {
+    font = items.font + "px";
+    height = items.line + "px";
+    console.log(font,height);
     let elem = document.getElementById("bookContent");
     if (elem != null) {
-        elem.style.fontSize = font;
-        elem.style.lineHeight = height;
+        elem.style = `font-size: ${font} !important; line-height:${height} !important`;
+        console.log(elem);
     }
-    let para = document.getElementsByTagName("P");
-    for (let i = 0; i < para.length; i++) {
-        para[i].style.fontSize = font;
-        para[i].style.lineHeight = height;
-    }
-});;
-
+});
